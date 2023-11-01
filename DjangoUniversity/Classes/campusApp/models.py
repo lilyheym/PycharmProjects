@@ -8,6 +8,10 @@ class UniversityCampus(models.Model):
 
     object = models.Manager()
 
+    def __str__(self):
+        display_course = '{0.Campus_Name}: {0.State}'
+        return display_course.format(self)
+
     # Removes added 's' that Django adds to the model name in the browser display
 
     class Meta:
