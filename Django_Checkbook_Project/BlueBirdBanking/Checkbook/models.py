@@ -11,6 +11,7 @@ class Account(models.Model):
     Accounts = models.Manager()
 
     # Allows references to a specific account to be returned as the owner's name not the primary key
+
     def __str__(self):
         return self.first_name + ' ' + self.last_name
 

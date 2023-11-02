@@ -10,5 +10,6 @@ urlpatterns = [
     # Sets the url path to Balance Sheet page BalanceSheet.html.
     path('balance/', views.balance, name='balance'),
     # Sets the url path to Add New Transaction page AddNewTransaction.html.
-    path('transaction/', views.transaction, name='transaction')
+    path('transaction/', views.transaction, name='transaction'),
+    path('<int:pk>/balance/', views.balance, name='balance'),
 ]
